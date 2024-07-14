@@ -120,28 +120,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Dots/bullets for slideshow */
-        .dot-container {
-            text-align: center;
-            padding: 20px;
-            background: #f9f9f9;
-        }
-
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.3s ease;
-        }
-
-        .active, .dot:hover {
-            background-color: #717171;
-        }
-
         /* Content sections */
         .section {
             padding: 60px 20px; /* Consistent padding */
@@ -389,14 +367,6 @@
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
-    <br>
-
-    <!-- Dots/bullets for slideshow -->
-    <div class="dot-container">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
 
     <!-- Concept Section -->
     <div id="concept" class="section">
@@ -496,17 +466,12 @@
     function showSlides(n) {
         let i;
         let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
         if (n > slides.length) { slideIndex = 1 }
         if (n < 1) { slideIndex = slides.length }
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].classList.remove("active");
-        }
         slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].classList.add("active");
     }
 </script>
 
