@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* General styles */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -32,7 +36,7 @@
             text-align: center;
             position: fixed;
             width: 100%;
-            top: 50px; /* Adjust top spacing based on header height */
+            top: 60px; /* Adjust top spacing based on header height */
             z-index: 1000; /* Ensures menu stays above other content */
         }
 
@@ -93,6 +97,12 @@
         }
 
         /* Dots/bullets for slideshow */
+        .dot-container {
+            text-align: center;
+            padding: 20px;
+            background: #f9f9f9;
+        }
+
         .dot {
             cursor: pointer;
             height: 15px;
@@ -219,7 +229,7 @@
     <br>
 
     <!-- Dots/bullets for slideshow -->
-    <div style="text-align:center">
+    <div class="dot-container">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
