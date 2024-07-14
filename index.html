@@ -64,11 +64,33 @@
         .mySlides {
             display: none;
             max-width: 100%;
+            position: relative;
         }
 
         .mySlides img {
             width: 100%;
             height: auto;
+        }
+
+        .text {
+            color: #fff;
+            font-size: 18px;
+            padding: 16px 32px;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        }
+
+        .text h3 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .text p {
+            margin: 5px 0 0;
+            font-size: 16px;
         }
 
         /* Navigation arrows */
@@ -211,14 +233,26 @@
     <div class="slideshow-container">
         <div class="mySlides fade">
             <img src="images/buffet1.jpg" alt="Buffet Image 1">
+            <div class="text">
+                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
+                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+            </div>
         </div>
 
         <div class="mySlides fade">
             <img src="images/buffet2.jpg" alt="Buffet Image 2">
+            <div class="text">
+                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
+                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+            </div>
         </div>
 
         <div class="mySlides fade">
             <img src="images/buffet3.jpg" alt="Buffet Image 3">
+            <div class="text">
+                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
+                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+            </div>
         </div>
 
         <!-- Navigation arrows -->
