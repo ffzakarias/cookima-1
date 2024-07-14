@@ -144,12 +144,13 @@
 
         /* Content sections */
         .section {
-            padding: 80px 20px;
+            padding: 60px 20px; /* Consistent padding */
             background-color: #f9f9f9;
+            text-align: center;
         }
 
         .section h2 {
-            text-align: center;
+            margin-bottom: 20px; /* Space between heading and content */
         }
 
         .section p {
@@ -158,10 +159,79 @@
             margin: 0 auto;
         }
 
-        /* Request a Quote form styles */
-        .quote-form {
+        .menu-download {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu-download a {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-download a:hover {
+            background-color: #45a049;
+        }
+
+        /* Concept categories */
+        .concept-categories {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px; /* Space between heading and categories */
+        }
+
+        .category {
+            flex: 1;
+            max-width: 300px;
+            padding: 20px;
+            margin: 10px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .category h3 {
+            margin-top: 0;
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 10px; /* Space between heading and content */
+        }
+
+        .category p {
+            text-align: justify;
+            margin: 0;
+        }
+
+        /* Quote section */
+        .quote-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 60px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .quote-section .quote-image {
+            flex: 1;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 10px;
+        }
+
+        .quote-section .quote-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-section .quote-form {
+            flex: 1;
+            max-width: 600px;
+            margin: 10px;
             background-color: #f2f2f2;
             padding: 20px;
             border-radius: 8px;
@@ -225,6 +295,20 @@
             .prev, .next {
                 font-size: 16px;
             }
+
+            .concept-categories {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .category {
+                max-width: 100%;
+            }
+
+            .quote-section {
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
@@ -249,24 +333,24 @@
         <div class="mySlides fade">
             <img src="images/buffet1.jpg" alt="Buffet Image 1">
             <div class="text">
-                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
-                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+                <h3>Welcome to Cookima</h3>
+                <p>We are a professional gathering company offering exquisite buffet services to companies and individuals.</p>
             </div>
         </div>
 
         <div class="mySlides fade">
             <img src="images/buffet2.jpg" alt="Buffet Image 2">
             <div class="text">
-                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
-                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+                <h3>Professional Buffet Services</h3>
+                <p>Our buffets feature a mix of sweet and savory dishes, carefully crafted to delight your guests.</p>
             </div>
         </div>
 
         <div class="mySlides fade">
             <img src="images/buffet3.jpg" alt="Buffet Image 3">
             <div class="text">
-                <h3>A Global Culinary Journey: Mixed Sweet and Savory Buffet</h3>
-                <p>We offer you a catering experience featuring a mixed sweet and savory buffet, remixing a variety of international flavors.</p>
+                <h3>Corporate and Personal Events</h3>
+                <p>We cater to both corporate and personal events, ensuring a memorable culinary experience for all.</p>
             </div>
         </div>
 
@@ -286,13 +370,29 @@
     <!-- Concept Section -->
     <div id="concept" class="section">
         <h2>Our Concept</h2>
-        <p>Welcome to Cookima, where the alchemy of taste meets culinary artistry. Our passion for cooking and dedication to using the finest ingredients ensure that every dish is a masterpiece.</p>
+        <div class="concept-categories">
+            <div class="category">
+                <h3>100% Homemade</h3>
+                <p>Prepared from local products bathed in sun, spices and smells from elsewhere, selected from inspired and inspiring producers.</p>
+            </div>
+            <div class="category">
+                <h3>Personalized Service</h3>
+                <p>Each table is unique, each event is taken care of from the kitchen to the service. The menus are created on demand according to the spirit of your event.</p>
+            </div>
+            <div class="category">
+                <h3>Responsible Cooking</h3>
+                <p>We work with fresh, quality and local products, depending on availability and the seasons. We source our products directly from responsible producers, we use eco-responsible packaging, and we put in place measures to combat food waste.</p>
+            </div>
+        </div>
     </div>
 
     <!-- Menu Section -->
     <div id="menu" class="section">
         <h2>Our Menu</h2>
         <p>Explore our diverse menu featuring seasonal and special offerings. Each dish is crafted with care to bring out the best flavors.</p>
+        <div class="menu-download">
+            <a href="path/to/your/menu.pdf" download>Download Our Menu</a>
+        </div>
     </div>
 
     <!-- Testimonials Section -->
@@ -305,22 +405,24 @@
     <div id="faq" class="section">
         <h2>FAQ</h2>
         <div class="faq-item">
-            <h3>What types of events do you cater?</h3>
-            <p>We cater all types of events, including weddings, corporate events, private parties, and more. Contact us for more details.</p>
+            <h3>What is included in the Finesse & Delicacy Buffet?</h3>
+            <p>Our buffet includes a mix of sweet and savory dishes, prepared with a variety of international flavors to delight your guests.</p>
         </div>
         <div class="faq-item">
-            <h3>Do you offer vegetarian or vegan options?</h3>
-            <p>Yes, we offer a variety of vegetarian and vegan dishes. Please let us know your dietary requirements when booking.</p>
+            <h3>Can you accommodate dietary restrictions?</h3>
+            <p>Yes, we can accommodate a variety of dietary restrictions. Please let us know your specific needs in advance.</p>
         </div>
         <div class="faq-item">
-            <h3>How can I request a quote?</h3>
-            <p>You can request a quote by filling out the form in the Request a Quote section. Provide as much detail as possible about your event.</p>
+            <h3>How far in advance do I need to book?</h3>
+            <p>We recommend booking at least two weeks in advance to ensure availability and proper preparation.</p>
         </div>
     </div>
 
     <!-- Request a Quote Section -->
-    <div id="quote" class="section">
-        <h2>Request a Quote</h2>
+    <div id="quote" class="quote-section">
+        <div class="quote-image">
+            <img src="images/quote.jpg" alt="Quote Image">
+        </div>
         <div class="quote-form">
             <form>
                 <input type="text" name="name" placeholder="Your Name" required>
