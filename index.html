@@ -216,6 +216,15 @@
             background-color: #f9f9f9;
         }
 
+        .quote-section h2 {
+            width: 100%;
+        }
+
+        .quote-section p {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
         .quote-section .quote-image {
             flex: 1;
             max-width: 600px;
@@ -269,6 +278,18 @@
 
         .quote-form button:hover {
             background-color: #45a049;
+        }
+
+        /* Checkbox styles */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-container input {
+            margin-right: 10px;
         }
 
         /* Footer styles */
@@ -420,6 +441,8 @@
 
     <!-- Request a Quote Section -->
     <div id="quote" class="quote-section">
+        <h2>Ask for a Quote</h2>
+        <p>We generally respond within 24 hours</p>
         <div class="quote-image">
             <img src="images/quote.jpg" alt="Quote Image">
         </div>
@@ -431,6 +454,10 @@
                 <input type="date" name="date" placeholder="Event Date" required>
                 <input type="number" name="guests" placeholder="Number of Guests" required>
                 <textarea name="details" placeholder="Event Details" rows="4" required></textarea>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="type" value="company"> Company</label>
+                    <label><input type="checkbox" name="type" value="individual"> Individual</label>
+                </div>
                 <button type="submit">Submit</button>
             </form>
         </div>
