@@ -216,13 +216,8 @@
             background-color: #f9f9f9;
         }
 
-        .quote-section h2 {
-            width: 100%;
-        }
-
-        .quote-section p {
-            width: 100%;
-            margin-bottom: 20px;
+        .quote-section h2, .quote-section p {
+            text-align: left;
         }
 
         .quote-section .quote-image {
@@ -245,6 +240,15 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .quote-form h2 {
+            text-align: center;
+        }
+
+        .quote-form p {
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         .quote-form form {
@@ -441,23 +445,23 @@
 
     <!-- Request a Quote Section -->
     <div id="quote" class="quote-section">
-        <h2>Ask for a Quote</h2>
-        <p>We generally respond within 24 hours</p>
         <div class="quote-image">
             <img src="images/quote.jpg" alt="Quote Image">
         </div>
         <div class="quote-form">
+            <h2>Ask for a Quote</h2>
+            <p>We generally respond within 24 hours</p>
             <form>
+                <div class="checkbox-container">
+                    <label><input type="checkbox" name="type" value="company"> Company</label>
+                    <label><input type="checkbox" name="type" value="individual"> Individual</label>
+                </div>
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number" required>
                 <input type="date" name="date" placeholder="Event Date" required>
                 <input type="number" name="guests" placeholder="Number of Guests" required>
                 <textarea name="details" placeholder="Event Details" rows="4" required></textarea>
-                <div class="checkbox-container">
-                    <label><input type="checkbox" name="type" value="company"> Company</label>
-                    <label><input type="checkbox" name="type" value="individual"> Individual</label>
-                </div>
                 <button type="submit">Submit</button>
             </form>
         </div>
