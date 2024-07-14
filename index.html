@@ -280,6 +280,40 @@
             text-align: left;
         }
 
+        /* Testimonials section */
+        .testimonials-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .testimonial {
+            max-width: 300px;
+            padding: 20px;
+            margin: 10px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .testimonial img {
+            max-width: 100px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .testimonial h3 {
+            margin-top: 0;
+            font-size: 16px;
+        }
+
         /* Footer styles */
         footer {
             background-color: #333;
@@ -315,6 +349,11 @@
             }
 
             .quote-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .testimonials-container {
                 flex-direction: column;
                 align-items: center;
             }
@@ -392,14 +431,30 @@
         <h2>Our Menu</h2>
         <p>Explore our diverse menu featuring seasonal and special offerings. Each dish is crafted with care to bring out the best flavors.</p>
         <div class="menu-download">
-            <a href="carte.pdf" download>Download Our Menu</a>
+            <a href="path/to/your/menu.pdf" download>Download Our Menu</a>
         </div>
     </div>
 
     <!-- Testimonials Section -->
     <div id="testimonials" class="section">
         <h2>Testimonials</h2>
-        <p>Read what our satisfied customers have to say about their experience with Cookima.</p>
+        <div class="testimonials-container">
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                <p>"The Cookima buffet was an absolute delight! The flavors were exquisite, and the presentation was beautiful. Our team loved it!"</p>
+                <h3>Maison365</h3>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                <p>"Cookima's service was outstanding. They catered to all our dietary needs and made our event a memorable one. Highly recommended!"</p>
+                <h3>Maison365</h3>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                <p>"From start to finish, Cookima exceeded our expectations. The food was delicious, and the staff were professional and courteous."</p>
+                <h3>Maison365</h3>
+            </div>
+        </div>
     </div>
 
     <!-- FAQ Section -->
