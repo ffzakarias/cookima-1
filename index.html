@@ -57,13 +57,13 @@
         .slideshow-container {
             position: relative;
             max-width: 100%;
-            overflow: hidden;
             margin-top: 70px; /* Adjust based on header and nav height */
+            overflow: hidden;
         }
 
         .mySlides {
             display: none;
-            max-width: 100%;
+            width: 100%;
             position: relative;
         }
 
@@ -208,6 +208,21 @@
             position: relative;
             bottom: 0;
             width: 100%;
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .text h3 {
+                font-size: 20px;
+            }
+
+            .text p {
+                font-size: 14px;
+            }
+
+            .prev, .next {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
