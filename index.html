@@ -296,6 +296,12 @@
             margin-right: 10px;
         }
 
+        .note {
+            font-size: 12px;
+            color: #888;
+            text-align: left;
+        }
+
         /* Footer styles */
         footer {
             background-color: #333;
@@ -456,11 +462,12 @@
                     <label><input type="checkbox" name="type" value="company"> Company</label>
                     <label><input type="checkbox" name="type" value="individual"> Individual</label>
                 </div>
+                <p class="note">Note: Minimum number of guests is 10 persons.</p>
                 <input type="text" name="name" placeholder="Your Name" required>
                 <input type="email" name="email" placeholder="Your Email" required>
                 <input type="tel" name="phone" placeholder="Your Phone Number" required>
                 <input type="date" name="date" placeholder="Event Date" required>
-                <input type="number" name="guests" placeholder="Number of Guests" required>
+                <input type="number" name="guests" placeholder="Number of Guests" required min="10">
                 <textarea name="details" placeholder="Event Details" rows="4" required></textarea>
                 <button type="submit">Submit</button>
             </form>
