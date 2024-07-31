@@ -42,7 +42,8 @@
         }
 
         .carousel-item {
-            height: 60vh;
+            height: 100vh;
+            min-height: 400px;
         }
 
         .carousel-item img {
@@ -51,13 +52,47 @@
             object-fit: cover;
         }
 
+        .carousel-caption {
+            bottom: 20%;
+            left: 5%;
+            right: 5%;
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+        }
+
+        .carousel-caption h3 {
+            font-size: 2rem;
+        }
+
+        .carousel-caption p {
+            font-size: 1.25rem;
+        }
+
         @media (max-width: 768px) {
             .navbar-nav .mobile-hidden {
                 display: none !important;
             }
 
             .carousel-item {
-                height: 40vh;
+                height: 100vh;
+            }
+
+            .carousel-caption {
+                bottom: 15%;
+                left: 5%;
+                right: 5%;
+                padding: 1rem;
+                background: rgba(0, 0, 0, 0.7);
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.5rem;
+            }
+
+            .carousel-caption p {
+                font-size: 1rem;
             }
 
             .category i {
@@ -67,6 +102,14 @@
 
         @media (max-width: 576px) {
             .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
+
+            .carousel-caption h3 {
+                font-size: 1.2rem;
+            }
+
+            .carousel-caption p {
                 font-size: 0.9rem;
             }
         }
@@ -317,7 +360,7 @@
     <p>&copy; 2024 Cookima. All rights reserved.</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pDqJk47Gf14+3sxtIqF+N9gtM1zHRFVTPnUzgr5mCU/g0tIYBvvVxFftO+S4JpGg" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
