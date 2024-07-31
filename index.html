@@ -16,6 +16,12 @@
             color: #ddd !important;
         }
 
+        .language-icon {
+            width: 24px;
+            height: 16px;
+            margin-left: 10px;
+        }
+
         .concept-categories .category {
             text-align: center;
             padding: 20px;
@@ -134,15 +140,12 @@
             <li class="nav-item mobile-hidden">
                 <a class="nav-link" href="#faq">FAQ</a>
             </li>
-            <!-- Language Selector Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Language
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="?lang=en">English</a>
-                    <a class="dropdown-item" href="?lang=nl">Dutch</a>
-                </div>
+            <!-- Language Selector with Flag Icons -->
+            <li class="nav-item">
+                <a class="nav-link" href="?lang=en"><img src="images/uk-flag.png" alt="English" class="language-icon"></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="?lang=nl"><img src="images/nl-flag.png" alt="Dutch" class="language-icon"></a>
             </li>
         </ul>
     </div>
