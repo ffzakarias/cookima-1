@@ -7,7 +7,7 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css" integrity="sha384-Qd12X+bQHTeTLlTdd/bx6pTW7rs8e3De66/eU4B4vry5U8y1G7/8r40F2x3VJ9Nb" crossorigin="anonymous">
     <style>
-        /* Additional custom styles */
+        /* Custom styles */
         .navbar-nav .nav-link {
             color: #fff !important;
         }
@@ -39,6 +39,36 @@
             color: #fff;
             text-align: center;
             padding: 20px 0;
+        }
+
+        .carousel-item {
+            height: 60vh;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 768px) {
+            .navbar-nav .mobile-hidden {
+                display: none !important;
+            }
+
+            .carousel-item {
+                height: 40vh;
+            }
+
+            .category i {
+                font-size: 1.5em;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-nav .nav-link {
+                font-size: 0.9rem;
+            }
         }
     </style>
 </head>
@@ -72,8 +102,7 @@
 </nav>
 
 <!-- Main Content -->
-<main class="container mt-5 pt-5">
-
+<main class="pt-5">
     <!-- Slideshow Section -->
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -83,21 +112,21 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="images/buffet1.jpg" alt="First slide">
+                <img src="images/buffet1.jpg" alt="First slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Welcome to Cookima</h3>
                     <p>We are a professional gathering company offering exquisite buffet services to companies and individuals.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/buffet2.jpg" alt="Second slide">
+                <img src="images/buffet2.jpg" alt="Second slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Professional Buffet Services</h3>
                     <p>Our buffets feature a mix of sweet and savory dishes, carefully crafted to delight your guests.</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="images/buffet3.jpg" alt="Third slide">
+                <img src="images/buffet3.jpg" alt="Third slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h3>Corporate and Personal Events</h3>
                     <p>We cater to both corporate and personal events, ensuring a memorable culinary experience for all.</p>
@@ -114,172 +143,173 @@
         </a>
     </div>
 
-    <!-- Concept Section -->
-    <div id="concept" class="section mt-5">
-        <h2 class="text-center mb-4">Our Concept</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="category">
-                    <i class="bi bi-basket"></i>
-                    <h3>100% Homemade</h3>
-                    <p>Prepared from local products bathed in sun, spices and smells from elsewhere, selected from inspired and inspiring producers.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="category">
-                    <i class="bi bi-person-check"></i>
-                    <h3>Personalized Service</h3>
-                    <p>Each table is unique, each event is taken care of from the kitchen to the service. The menus are created on demand according to the spirit of your event.</p>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="category">
-                    <i class="bi bi-recycle"></i>
-                    <h3>Responsible Cooking</h3>
-                    <p>We work with fresh, quality and local products, depending on availability and the seasons. We source our products directly from responsible producers, we use eco-responsible packaging, and we put in place measures to combat food waste.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Menu Section -->
-    <div id="menu" class="section mt-5">
-        <h2 class="text-center mb-4">Our Menu</h2>
-        <p class="text-center">Explore our diverse menu featuring seasonal and special offerings. Each dish is crafted with care to bring out the best flavors.</p>
-        <div class="text-center">
-            <a href="path/to/your/menu.pdf" class="btn btn-success" download>Download Our Menu</a>
-        </div>
-    </div>
-
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="section mt-5">
-        <h2 class="text-center mb-4">Testimonials</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
-                    <p>"The Cookima buffet was an absolute delight! The flavors were exquisite, and the presentation was beautiful. Our team loved it!"</p>
-                    <h3>Maison365</h3>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
-                    <p>"Cookima's service was outstanding. They catered to all our dietary needs and made our event a memorable one. Highly recommended!"</p>
-                    <h3>Maison365</h3>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="testimonial">
-                    <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
-                    <p>"From start to finish, Cookima exceeded our expectations. The food was delicious, and the staff were professional and courteous."</p>
-                    <h3>Maison365</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FAQ Section -->
-    <div id="faq" class="section mt-5">
-        <h2 class="text-center mb-4">FAQ</h2>
-        <div class="accordion" id="faqAccordion">
-            <div class="card">
-                <div class="card-header" id="headingOne">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                            What is included in the Finesse & Delicacy Buffet?
-                        </button>
-                    </h2>
-                </div>
-
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        Our buffet includes a mix of sweet and savory dishes, prepared with a variety of international flavors to delight your guests.
+    <div class="container mt-5">
+        <!-- Concept Section -->
+        <div id="concept" class="section mt-5">
+            <h2 class="text-center mb-4">Our Concept</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <i class="bi bi-basket"></i>
+                        <h3>100% Homemade</h3>
+                        <p>Prepared from local products bathed in sun, spices and smells from elsewhere, selected from inspired and inspiring producers.</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingTwo">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Can you accommodate dietary restrictions?
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        Yes, we can accommodate a variety of dietary restrictions. Please let us know your specific needs in advance.
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <i class="bi bi-person-check"></i>
+                        <h3>Personalized Service</h3>
+                        <p>Each table is unique, each event is taken care of from the kitchen to the service. The menus are created on demand according to the spirit of your event.</p>
                     </div>
                 </div>
-            </div>
-            <div class="card">
-                <div class="card-header" id="headingThree">
-                    <h2 class="mb-0">
-                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                            How far in advance do I need to book?
-                        </button>
-                    </h2>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
-                    <div class="card-body">
-                        We recommend booking at least two weeks in advance to ensure availability and proper preparation.
+                <div class="col-md-4 mb-4">
+                    <div class="category">
+                        <i class="bi bi-recycle"></i>
+                        <h3>Responsible Cooking</h3>
+                        <p>We work with fresh, quality and local products, depending on availability and the seasons. We source our products directly from responsible producers, we use eco-responsible packaging, and we put in place measures to combat food waste.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Request a Quote Section -->
-    <div id="quote" class="quote-section mt-5">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="images/quote.jpg" alt="Quote Image" class="img-fluid rounded">
+        <!-- Menu Section -->
+        <div id="menu" class="section mt-5">
+            <h2 class="text-center mb-4">Our Menu</h2>
+            <p class="text-center">Explore our diverse menu featuring seasonal and special offerings. Each dish is crafted with care to bring out the best flavors.</p>
+            <div class="text-center">
+                <a href="path/to/your/menu.pdf" class="btn btn-success" download>Download Our Menu</a>
             </div>
-            <div class="col-md-6">
-                <h2 class="text-center mb-4">Ask for a Quote</h2>
-                <p class="text-center">We generally respond within 24 hours</p>
-                <form>
-                    <div class="form-group">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="type" value="company" id="companyCheck">
-                            <label class="form-check-label" for="companyCheck">
-                                Company
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="type" value="individual" id="individualCheck">
-                            <label class="form-check-label" for="individualCheck">
-                                Individual
-                            </label>
+        </div>
+
+        <!-- Testimonials Section -->
+        <div id="testimonials" class="section mt-5">
+            <h2 class="text-center mb-4">Testimonials</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                        <p>"The Cookima buffet was an absolute delight! The flavors were exquisite, and the presentation was beautiful. Our team loved it!"</p>
+                        <h3>Maison365</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                        <p>"Cookima's service was outstanding. They catered to all our dietary needs and made our event a memorable one. Highly recommended!"</p>
+                        <h3>Maison365</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="testimonial">
+                        <img src="https://via.placeholder.com/100" alt="Maison365 Logo">
+                        <p>"From start to finish, Cookima exceeded our expectations. The food was delicious, and the staff were professional and courteous."</p>
+                        <h3>Maison365</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div id="faq" class="section mt-5">
+            <h2 class="text-center mb-4">FAQ</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                What is included in the Finesse & Delicacy Buffet?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Our buffet includes a mix of sweet and savory dishes, prepared with a variety of international flavors to delight your guests.
                         </div>
                     </div>
-                    <div class="form-group">
-                        <p class="note">Note: Minimum number of guests is 10 persons.</p>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Can you accommodate dietary restrictions?
+                            </button>
+                        </h2>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            Yes, we can accommodate a variety of dietary restrictions. Please let us know your specific needs in advance.
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                How far in advance do I need to book?
+                            </button>
+                        </h2>
                     </div>
-                    <div class="form-group">
-                        <input type="tel" class="form-control" name="phone" placeholder="Your Phone Number" required>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faqAccordion">
+                        <div class="card-body">
+                            We recommend booking at least two weeks in advance to ensure availability and proper preparation.
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="date" class="form-control" name="date" placeholder="Event Date" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="number" class="form-control" name="guests" placeholder="Number of Guests" required min="10">
-                    </div>
-                    <div class="form-group">
-                        <textarea class="form-control" name="details" placeholder="Event Details" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
-                </form>
+                </div>
             </div>
         </div>
-    </div>
 
+        <!-- Request a Quote Section -->
+        <div id="quote" class="quote-section mt-5">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <img src="images/quote.jpg" alt="Quote Image" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6">
+                    <h2 class="text-center mb-4">Ask for a Quote</h2>
+                    <p class="text-center">We generally respond within 24 hours</p>
+                    <form>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="type" value="company" id="companyCheck">
+                                <label class="form-check-label" for="companyCheck">
+                                    Company
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="type" value="individual" id="individualCheck">
+                                <label class="form-check-label" for="individualCheck">
+                                    Individual
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <p class="note">Note: Minimum number of guests is 10 persons.</p>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-control" name="phone" placeholder="Your Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="date" placeholder="Event Date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="guests" placeholder="Number of Guests" required min="10">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" name="details" placeholder="Event Details" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </main>
 
 <!-- Footer Section -->
@@ -287,7 +317,7 @@
     <p>&copy; 2024 Cookima. All rights reserved.</p>
 </footer>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-pDqJk47Gf14+3sxtIqF+N9gtM1zHRFVTPnUzgr5mCU/g0tIYBvvVxFftO+S4JpGg" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
