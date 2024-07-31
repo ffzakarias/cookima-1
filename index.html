@@ -52,6 +52,10 @@
             background-color: #555;
         }
 
+        .mobile-hidden {
+            display: none;
+        }
+
         /* Slideshow container styles */
         .slideshow-container {
             position: relative;
@@ -327,6 +331,10 @@
 
         /* Responsive styles */
         @media only screen and (max-width: 600px) {
+            .mobile-hidden {
+                display: none;
+            }
+
             .text h3 {
                 font-size: 20px;
             }
@@ -366,10 +374,10 @@
 <header>
     <nav>
         <a href="#concept">Concept</a>
-        <a href="#menu">Menu</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#faq">FAQ</a>
         <a href="#quote">Request a Quote</a>
+        <a href="#menu" class="mobile-hidden">Menu</a>
+        <a href="#testimonials" class="mobile-hidden">Testimonials</a>
+        <a href="#faq" class="mobile-hidden">FAQ</a>
     </nav>
 </header>
 
